@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ochonma Confidence E. · Registered Nurse & Medical VA</title>
+    <meta name="description"
+        content="Registered Nurse · Telehealth Nurse · Healthcare Administrative Assistant · Care Coordinator · Helping Healthcare Providers Streamline Operations." />
+
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
+    <link rel="apple-touch-icon" href="./assets/favicon.ico" />
+
+    <!-- ===== SOCIAL PREVIEW (Open Graph / Twitter Cards) - UPDATED for IamSalvation/Ochonma-C_portfolio ===== -->
+    <meta property="og:title" content="Ochonma Confidence E. · Registered Nurse & Medical VA" />
+    <meta property="og:description"
+        content="Registered Nurse · Telehealth Nurse · Healthcare Administrative Assistant · Care Coordinator · Helping Healthcare Providers Streamline Operations." />
+    <meta property="og:url" content="https://IamSalvation.github.io/Ochonma-C_portfolio/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://IamSalvation.github.io/Ochonma-C_portfolio/assets/Ochonma.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ochonma Confidence E. · Registered Nurse & Medical VA" />
+    <meta name="twitter:description"
+        content="Registered Nurse · Telehealth Nurse · Healthcare Administrative Assistant · Care Coordinator · Helping Healthcare Providers Streamline Operations." />
+    <meta name="twitter:image" content="https://IamSalvation.github.io/Ochonma-C_portfolio/assets/Ochonma.jpg" />
+
+    <!-- Font Awesome 6 (stable) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+        rel="stylesheet" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ===== PROGRESS BAR ===== -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- ===== NOISE OVERLAY ===== -->
+    <div class="noise-overlay"></div>
+
+    <!-- ===== GLOW TRAIL ===== -->
+    <div class="glow-trail" id="glowTrail"></div>
+
+    <!-- ===== CUSTOM CURSOR ===== -->
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- ===== GEOMETRIC SHAPES (Medical Crosses) ===== -->
+    <div class="geometric-shapes" id="geometricShapes"></div>
+
+    <!-- ===== ECG / HEARTBEAT CANVAS ===== -->
+    <canvas id="ecgCanvas"></canvas>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#hero" class="logo">Ochonma<span>.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#work-samples">Samples</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#booking">Book</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="particles-container" id="particlesContainer"></div>
+        <div class="hero-glow"></div>
+
+        <div class="container hero-container hero-reverse">
+            <!-- LEFT: Content -->
+            <div class="hero-content-right">
+                <div class="hero-badge">✦ Registered Nurse · Medical VA</div>
+                <h1 class="hero-title">
+                    Registered Nurse &amp;<br />
+                    <span class="typewriter-wrapper">
+                        <span id="typewriterText"></span>
+                        <span class="cursor-blink">|</span>
+                    </span>
+                </h1>
+                <p class="hero-subtitle">Telehealth Nurse · Healthcare Administrative Assistant · Care Coordinator</p>
+
+                <div class="hero-trust-badges">
+                    <span><i class="fas fa-user-md"></i> Registered Nurse</span>
+                    <span><i class="fas fa-video"></i> Telehealth</span>
+                    <span><i class="fas fa-file-medical"></i> EMR/EHR</span>
+                    <span><i class="fas fa-shield-alt"></i> HIPAA Compliant</span>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#booking" class="btn btn-primary btn-ripple">Book a Discovery Call</a>
+                    <a href="#services" class="btn btn-outline">View Services</a>
+                </div>
+
+                <!-- TRUST BADGES -->
+                <div class="trust-badges">
+                    <div class="trust-item">
+                        <i class="fas fa-heartbeat"></i>
+                        <span><strong>100+</strong> Patients Cared For</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-video"></i>
+                        <span><strong>50+</strong> Telehealth Sessions</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-hospital"></i>
+                        <span><strong>5+</strong> Clinics Supported</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-certificate"></i>
+                        <span><strong>5</strong> Certifications</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Image Frame with SINGLE PULSE RING -->
+            <div class="hero-image-right">
+                <div class="hero-image-new-frame tilt-card">
+                    <div class="hero-image-new-inner">
+                        <img src="./assets/Ochonma.jpg" alt="Ochonma Confidence E." />
+                        <div class="hero-image-new-overlay"></div>
+                    </div>
+                    <!-- 🔴 SINGLE PULSE RING (Heartbeat) -->
+                    <div class="hero-image-pulse-ring"></div>
+                    <div class="hero-image-new-dots"></div>
+                    <div class="hero-image-new-badge">✦ RN · MVA</div>
+                </div>
+
+                <!-- STATS BAR -->
+                <div class="hero-stats-bar">
+                    <div class="stat-item">
+                        <strong class="counter" data-target="3">0</strong>
+                        <span>Years Experience</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <strong class="counter" data-target="82" data-suffix="+">0</strong>
+                        <span>Connections</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <strong class="counter" data-target="57">0</strong>
+                        <span>Skills</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-text-side">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">From Bedside to <span>Virtual Care</span></h2>
+                    <p>As a Registered Nurse, I've had the opportunity to care for patients in different clinical
+                        settings, and those experiences have strengthened not only my clinical skills but also my
+                        ability to communicate, stay organized, and remain calm under pressure. I genuinely enjoy
+                        helping people and finding practical solutions that make healthcare run more smoothly.</p>
+                    <p>Over time, I've developed a strong interest in the administrative side of healthcare. I'm skilled
+                        in clinical documentation, patient communication, appointment scheduling, electronic medical
+                        records, and coordinating care while maintaining confidentiality and professionalism. I'm also
+                        comfortable learning and working with new healthcare technologies.</p>
+                    <p>I believe that reliability, attention to detail, and empathy are just as important as technical
+                        skills. Whether I'm supporting patients directly or helping a healthcare team behind the scenes,
+                        I take pride in delivering quality work and creating a positive experience for everyone
+                        involved.</p>
+                    <p style="font-weight: 600; color: var(--primary);">I'm currently open to opportunities in Medical
+                        Virtual Assistance, healthcare administration, care coordination, and other remote healthcare
+                        support roles where I can continue to grow while making a meaningful impact.</p>
+                    <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px;">
+                        <a href="#booking" class="btn btn-primary btn-ripple">Book a Discovery Call</a>
+                        <a href="./assets/Ochonma_Confidence_Resume.pdf" download class="btn btn-download btn-ripple">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="about-highlights-cards">
+                    <div class="highlight-card">
+                        <i class="fas fa-user-md"></i>
+                        <h4>Registered Nurse</h4>
+                        <p>Licensed RN with hands-on clinical experience in hospital and home care settings.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fas fa-laptop-medical"></i>
+                        <h4>Medical Virtual Assistant</h4>
+                        <p>Certified MVA with expertise in EMR/EHR, telehealth coordination, and administrative support.
+                        </p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h4>Patient-Centered Care</h4>
+                        <p>Committed to delivering compassionate, high-quality care and creating positive patient
+                            experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TOOLS ===== -->
+    <section class="tools-section" id="tools">
+        <div class="container">
+            <span class="section-tag">My Toolbox</span>
+            <h2 class="section-title">Tools I <span>Master</span></h2>
+            <div class="tools-grid">
+                <div class="tool-card"><i class="fas fa-file-medical"></i><span>EMR/EHR Systems</span></div>
+                <div class="tool-card"><i class="fas fa-google"></i><span>Google Workspace</span></div>
+                <div class="tool-card"><i class="fas fa-video"></i><span>Telehealth Platforms</span></div>
+                <div class="tool-card"><i class="fas fa-calendar-alt"></i><span>Calendly</span></div>
+                <div class="tool-card"><i class="fas fa-envelope"></i><span>Email Management</span></div>
+                <div class="tool-card"><i class="fas fa-database"></i><span>Data Entry</span></div>
+                <div class="tool-card"><i class="fas fa-file-alt"></i><span>Medical Documentation</span></div>
+                <div class="tool-card"><i class="fas fa-shield-alt"></i><span>HIPAA Compliance</span></div>
+                <div class="tool-card"><i class="fab fa-microsoft"></i><span>Microsoft 365</span></div>
+                <div class="tool-card"><i class="fas fa-phone-alt"></i><span>Patient Communication</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-header">
+                <span class="section-tag">What I Do</span>
+                <h2 class="section-title">Healthcare <span>Services</span></h2>
+                <p class="section-sub">Comprehensive clinical and administrative support for healthcare providers.</p>
+            </div>
+
+            <div class="services-grid-new">
+                <div class="service-new">
+                    <div class="service-new-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Appointment Scheduling</h3>
+                    <p>Efficient patient scheduling, follow-ups, and calendar management.</p>
+                    <span class="service-new-number">01</span>
+                </div>
+                <div class="service-new">
+                    <div class="service-new-icon"><i class="fas fa-file-medical"></i></div>
+                    <h3>EMR/EHR Management</h3>
+                    <p>Accurate documentation, medical records management, and data entry.</p>
+                    <span class="service-new-number">02</span>
+                </div>
+                <div class="service-new">
+                    <div class="service-new-icon"><i class="fas fa-video"></i></div>
+                    <h3>Telehealth Coordination</h3>
+                    <p>Seamless virtual care support, patient communication, and tech setup.</p>
+                    <span class="service-new-number">03</span>
+                </div>
+                <div class="service-new">
+                    <div class="service-new-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>Insurance Verification</h3>
+                    <p>Prior authorizations, billing coordination, and claims support.</p>
+                    <span class="service-new-number">04</span>
+                </div>
+                <div class="service-new">
+                    <div class="service-new-icon"><i class="fas fa-notes-medical"></i></div>
+                    <h3>Medical Documentation</h3>
+                    <p>Clinical notes, transcription, and comprehensive reporting.</p>
+                    <span class="service-new-number">05</span>
+                </div>
+                <div class="service-new">
+                    <div class="service-new-icon"><i class="fas fa-users"></i></div>
+                    <h3>Care Coordination</h3>
+                    <p>Patient communication, care planning, and team collaboration.</p>
+                    <span class="service-new-number">06</span>
+                </div>
+                <div class="service-new">
+                    <div class="service-new-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Inbox Management</h3>
+                    <p>Organized email handling and professional correspondence.</p>
+                    <span class="service-new-number">07</span>
+                </div>
+                <div class="service-new">
+                    <div class="service-new-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data Entry</h3>
+                    <p>Accurate database management, organization, and reporting.</p>
+                    <span class="service-new-number">08</span>
+                </div>
+                <div class="service-new">
+                    <div class="service-new-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>HIPAA Compliance</h3>
+                    <p>Privacy-aware administrative support with strict confidentiality.</p>
+                    <span class="service-new-number">09</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="experience-header">
+                <span class="section-tag">Experience</span>
+                <h2 class="section-title">Where I've <span>Worked</span></h2>
+            </div>
+
+            <div class="experience-grid-new">
+                <div class="exp-new">
+                    <div class="exp-new-marker"></div>
+                    <div class="exp-new-content">
+                        <div class="exp-new-header">
+                            <h3>Nursing Officer</h3>
+                            <span class="exp-new-company">Rosa Mystica · Contract</span>
+                            <span class="exp-new-date">Jan 2026 – Present · 7 mos</span>
+                        </div>
+                        <p>Patient care coordination, nursing administration, and clinical support across medical and
+                            surgical units.</p>
+                        <div class="exp-new-stats">
+                            <span><i class="fas fa-users"></i> 50+ patients managed</span>
+                            <span><i class="fas fa-clock"></i> 7+ months</span>
+                        </div>
+                        <div class="exp-new-skills">
+                            <span>Patient Care</span>
+                            <span>Nursing Administration</span>
+                            <span>Clinical Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-new">
+                    <div class="exp-new-marker"></div>
+                    <div class="exp-new-content">
+                        <div class="exp-new-header">
+                            <h3>Home Health Nurse</h3>
+                            <span class="exp-new-company">Private Home Care</span>
+                            <span class="exp-new-date">May 2026 – Jul 2026 · 3 mos</span>
+                        </div>
+                        <p>Selected by the client's family to provide ongoing home-based nursing care with compassion
+                            and professionalism.</p>
+                        <div class="exp-new-stats">
+                            <span><i class="fas fa-users"></i> 10+ home care patients</span>
+                            <span><i class="fas fa-heart"></i> 100% family satisfaction</span>
+                        </div>
+                        <div class="exp-new-skills">
+                            <span>Home Health</span>
+                            <span>Patient Monitoring</span>
+                            <span>Wound Care</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-new">
+                    <div class="exp-new-marker"></div>
+                    <div class="exp-new-content">
+                        <div class="exp-new-header">
+                            <h3>Registered Nurse</h3>
+                            <span class="exp-new-company">Rosa Mystica Hospital</span>
+                            <span class="exp-new-date">Jan 2026 – Jun 2026 · 6 mos</span>
+                        </div>
+                        <p>Delivered safe, person-centred nursing care to patients across medical, surgical, and
+                            emergency units.</p>
+                        <div class="exp-new-stats">
+                            <span><i class="fas fa-users"></i> 80+ patients cared for</span>
+                            <span><i class="fas fa-clock"></i> 6+ months</span>
+                        </div>
+                        <div class="exp-new-skills">
+                            <span>Emergency Nursing</span>
+                            <span>Critical Care</span>
+                            <span>Patient Assessment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <span class="section-tag">Skills</span>
+            <h2 class="section-title">Clinical &amp; <span>Administrative</span></h2>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Clinical Skills</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Patient Assessment</li>
+                        <li><i class="fas fa-check-circle"></i> Wound Care</li>
+                        <li><i class="fas fa-check-circle"></i> Catheter Care</li>
+                        <li><i class="fas fa-check-circle"></i> Clinical Monitoring</li>
+                        <li><i class="fas fa-check-circle"></i> Patient Education</li>
+                        <li><i class="fas fa-check-circle"></i> Evidence-Based Practice</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Administrative Skills</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Data Entry</li>
+                        <li><i class="fas fa-check-circle"></i> Medical Documentation</li>
+                        <li><i class="fas fa-check-circle"></i> Appointment Scheduling</li>
+                        <li><i class="fas fa-check-circle"></i> Email Management</li>
+                        <li><i class="fas fa-check-circle"></i> Insurance Verification</li>
+                        <li><i class="fas fa-check-circle"></i> HIPAA Compliance</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Telehealth &amp; Tech</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Telehealth Coordination</li>
+                        <li><i class="fas fa-check-circle"></i> EMR/EHR Systems</li>
+                        <li><i class="fas fa-check-circle"></i> Google Workspace</li>
+                        <li><i class="fas fa-check-circle"></i> Microsoft 365</li>
+                        <li><i class="fas fa-check-circle"></i> Care Coordination</li>
+                        <li><i class="fas fa-check-circle"></i> Patient Monitoring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WORK (Case Studies) ===== -->
+    <section class="work" id="work">
+        <div class="container">
+            <div class="work-header">
+                <span class="section-tag">Case Studies</span>
+                <h2 class="section-title">Tasked. Managed. <span>Delivered.</span></h2>
+                <p class="section-sub">Click any card to view the full case study.</p>
+            </div>
+
+            <div class="work-grid-new">
+                <div class="work-new" data-case="careplan">
+                    <div class="work-new-icon"><i class="fas fa-notes-medical"></i></div>
+                    <h3>Patient Care Plan System</h3>
+                    <p>Structured care coordination for 50+ patients</p>
+                    <span class="work-new-cta">View case study →</span>
+                </div>
+                <div class="work-new" data-case="telehealth">
+                    <div class="work-new-icon"><i class="fas fa-video"></i></div>
+                    <h3>Telehealth Implementation</h3>
+                    <p>Virtual care setup for 5 clinics</p>
+                    <span class="work-new-cta">View case study →</span>
+                </div>
+                <div class="work-new" data-case="scheduling">
+                    <div class="work-new-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Appointment Scheduling System</h3>
+                    <p>Streamlined scheduling for 200+ patients</p>
+                    <span class="work-new-cta">View case study →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CASE STUDY MODAL ===== -->
+    <div class="modal-overlay" id="caseModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-content" id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- ===== WORK SAMPLES (10 Items - Auto Smooth Carousel) ===== -->
+    <section class="work-samples" id="work-samples">
+        <div class="container">
+            <span class="section-tag">Work Samples</span>
+            <h2 class="section-title">My <span>Recent Work</span></h2>
+            <p class="section-sub">A glimpse into projects I've delivered for clients.</p>
+
+            <div class="work-samples-carousel-wrapper">
+                <div class="work-samples-track" id="workSamplesTrack">
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/patient_calender_appointment.png" alt="Patient Calendar Management" />
+                            <div class="work-sample-overlay">
+                                <h3>Patient Calendar Management</h3>
+                                <p>Healthcare · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/telehealth_dashboard.png" alt="Telehealth Dashboard" />
+                            <div class="work-sample-overlay">
+                                <h3>Telehealth Dashboard</h3>
+                                <p>Virtual Care · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/appointment_scheduler.png" alt="Appointment Scheduler" />
+                            <div class="work-sample-overlay">
+                                <h3>Appointment Scheduler</h3>
+                                <p>Healthcare · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/emr_doc_sys.png" alt="EMR Documentation" />
+                            <div class="work-sample-overlay">
+                                <h3>EMR Documentation System</h3>
+                                <p>Medical Records · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/care_cordination_sys.png" alt="Care Coordination" />
+                            <div class="work-sample-overlay">
+                                <h3>Care Coordination System</h3>
+                                <p>Patient Care · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/insurance_verification.png" alt="Insurance Verification" />
+                            <div class="work-sample-overlay">
+                                <h3>Insurance Verification</h3>
+                                <p>Billing · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/patient_assesment.png" alt="Patient Assessment" />
+                            <div class="work-sample-overlay">
+                                <h3>Patient Assessment Template</h3>
+                                <p>Clinical · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/Telehealth patient guide.png" alt="Telehealth Guide" />
+                            <div class="work-sample-overlay">
+                                <h3>Telehealth Patient Guide</h3>
+                                <p>Virtual Care · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/medication sheet tracker.png" alt="Medication Tracker" />
+                            <div class="work-sample-overlay">
+                                <h3>Medication Tracker</h3>
+                                <p>Patient Care · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/care_cordination_sys.png" alt="Nursing Handoff" />
+                            <div class="work-sample-overlay">
+                                <h3>Nursing Handoff Report</h3>
+                                <p>Clinical · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/patient_calender_appointment.png" alt="Patient Calendar Management" />
+                            <div class="work-sample-overlay">
+                                <h3>Patient Calendar Management</h3>
+                                <p>Healthcare · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS (10 Items) ===== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials-header">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What Clients <span>Say</span></h2>
+            </div>
+
+            <div class="testimonial-carousel-wrapper">
+                <div class="testimonial-carousel-track" id="testimonialCarouselTrack">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>Ochonma is an exceptional nurse. His attention to detail and compassionate care made a
+                                huge difference in my recovery. He's professional and truly cares about his patients.
+                            </p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">C</div>
+                                <div>
+                                    <strong>Chidi O.</strong>
+                                    <span>Patient</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>He streamlined our telehealth operations and made virtual care accessible for our
+                                patients. His technical skills and clinical knowledge are impressive.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">A</div>
+                                <div>
+                                    <strong>Dr. Amina</strong>
+                                    <span>Telehealth Clinic Owner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>He managed our patient scheduling and documentation with incredible efficiency. We've
+                                seen a significant improvement in our workflow since he joined the team.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">F</div>
+                                <div>
+                                    <strong>Francis N.</strong>
+                                    <span>Clinic Manager</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>Ochonma's ability to handle complex patient cases with calm professionalism is
+                                remarkable. He's an asset to any healthcare team.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">G</div>
+                                <div>
+                                    <strong>Grace E.</strong>
+                                    <span>Nursing Supervisor</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>He's incredibly reliable and knowledgeable. He helped us implement an efficient EMR
+                                system that saved us hours of paperwork every week.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">S</div>
+                                <div>
+                                    <strong>Dr. Samuel</strong>
+                                    <span>Medical Director</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>He provided excellent home health care for my elderly mother. His compassion, patience,
+                                and clinical skills gave our family peace of mind.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">M</div>
+                                <div>
+                                    <strong>Mary O.</strong>
+                                    <span>Family Member</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 7 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>He is one of the most organized and detail-oriented healthcare professionals I've worked
+                                with. His administrative skills are top-notch.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">K</div>
+                                <div>
+                                    <strong>Kelechi I.</strong>
+                                    <span>Healthcare Administrator</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 8 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>He made the transition to telehealth seamless for our practice. His technical expertise
+                                and patient communication skills are outstanding.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">P</div>
+                                <div>
+                                    <strong>Dr. Paul</strong>
+                                    <span>Practice Owner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 9 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>He handled our medical records management with precision and confidentiality. We trust
+                                him completely with sensitive patient information.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">T</div>
+                                <div>
+                                    <strong>Tunde A.</strong>
+                                    <span>Clinic Manager</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 10 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>He goes above and beyond for his patients. His dedication to nursing and patient-centered
+                                care is inspiring and truly appreciated.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">R</div>
+                                <div>
+                                    <strong>Rita N.</strong>
+                                    <span>Patient Advocate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate for seamless loop -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>Ochonma is an exceptional nurse. His attention to detail and compassionate care made a
+                                huge difference in my recovery. He's professional and truly cares about his patients.
+                            </p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">C</div>
+                                <div>
+                                    <strong>Chidi O.</strong>
+                                    <span>Patient</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-carousel-dots" id="testimonialDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section class="certifications" id="certifications">
+        <div class="container">
+            <span class="section-tag">Certifications</span>
+            <h2 class="section-title">Professional <span>Certifications</span></h2>
+
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-user-md"></i></div>
+                    <h3>Registered Nurse (RN)</h3>
+                    <p>Licensed Registered Nurse with clinical experience in hospital, home health, and telehealth
+                        settings.</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-video"></i></div>
+                    <h3>Certified Telehealth Nurse</h3>
+                    <p>Specialized training in virtual care delivery, telehealth platforms, and remote patient
+                        monitoring.</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-laptop-medical"></i></div>
+                    <h3>Certified Medical Virtual Assistant</h3>
+                    <p>Training in medical administrative support, EMR/EHR systems, and HIPAA-compliant healthcare
+                        operations.</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>BLS & ACLS Certification</h3>
+                    <p>Basic Life Support (BLS) and Advanced Cardiac Life Support (ACLS) certified.</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>HIPAA Compliance Certification</h3>
+                    <p>Training in healthcare privacy, data protection, and HIPAA compliance standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BOOKING SECTION (Simple Buttons) ===== -->
+    <section class="booking-section" id="booking">
+        <div class="container">
+            <div class="booking-wrapper">
+                <div class="booking-header">
+                    <span class="section-tag">Book a Session</span>
+                    <h2 class="section-title">Let's <span>Connect</span></h2>
+                    <p>Ready to simplify your healthcare operations? Reach out through any of the channels below.</p>
+                </div>
+
+                <div class="booking-buttons-grid">
+                    <a href="https://calendly.com/confidenceochonma2" target="_blank" class="btn btn-primary btn-block">
+                        <i class="fas fa-calendar-check"></i> Schedule 1-on-1 Consultation
+                    </a>
+                    <a href="mailto:confidenceochonma2@gmail.com" class="btn btn-outline btn-block">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
+                    <a href="https://wa.me/2348102940980" target="_blank" class="btn btn-whatsapp btn-block">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                    <a href="./assets/Ochonma_Confidence_Resume.pdf" download class="btn btn-download btn-block">
+                        <i class="fas fa-download"></i> Download Resume / CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION (With Form) ===== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-left">
+                    <span class="section-tag">Connect</span>
+                    <h2 class="section-title">Let's <span>Simplify Healthcare</span></h2>
+                    <p>Ready to streamline your healthcare operations? I'm here to handle the details so you can focus
+                        on what matters most – patient care.</p>
+                    <p style="font-weight: 500; color: var(--primary);">Whether you need clinical support,
+                        administrative assistance, or telehealth coordination, I'd love to learn about your needs and
+                        explore how we can work together.</p>
+                    <div class="contact-social">
+                        <a href="https://github.com/Ochonma-C" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/ochonma-confidence-e-146957227" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://facebook.com/share/1BHxfTWBAJ/" target="_blank" aria-label="Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="mailto:confidenceochonma2@gmail.com" target="_blank" aria-label="Email"><i
+                                class="fas fa-envelope"></i></a>
+                        <a href="tel:+2348102940980" target="_blank" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                        <a href="https://calendly.com/confidenceochonma2" target="_blank" aria-label="Calendly"><i
+                                class="fas fa-calendar-plus"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <!-- CONTACT FORM -->
+                    <form id="contactForm" action="https://formspree.io/f/mnjeryvy" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your name" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email address" required />
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message"
+                                placeholder="Tell me about your healthcare practice and what support you need..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Ochonna Confidence E. · Registered Nurse &amp; Medical VA</p>
+            <p class="footer-tagline">Helping Healthcare Providers Streamline Operations &amp; Deliver Patient-Centered
+                Care.</p>
+            <p class="footer-links">
+                <a href="https://github.com/Ochonma-C" target="_blank">GitHub</a> ·
+                <a href="https://linkedin.com/in/ochonma-confidence-e-146957227" target="_blank">LinkedIn</a> ·
+                <a href="https://calendly.com/confidenceochonma2" target="_blank">Calendly</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
